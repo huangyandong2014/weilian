@@ -1,0 +1,85 @@
+[ 2014-07-25T16:46:14+08:00 ] 180.99.64.192 /index.php
+NOTIC: [8] Undefined index: uid /var/www/wx/ThinkPHP/Library/Think/Controller.class.php 第 125 行.
+NOTIC: [8] Undefined index: uid /var/www/wx/ThinkPHP/Library/Think/Controller.class.php 第 129 行.
+
+[ 2014-07-25T16:46:14+08:00 ] 180.99.64.192 /index.php?s=/home/index/main.html
+NOTIC: [8] Undefined index: uid /var/www/wx/ThinkPHP/Library/Think/Controller.class.php 第 125 行.
+NOTIC: [8] Undefined index: uid /var/www/wx/ThinkPHP/Library/Think/Controller.class.php 第 129 行.
+
+[ 2014-07-25T16:46:14+08:00 ] 180.99.64.192 /index.php?s=/home/user/login.html
+NOTIC: [8] Undefined index: uid /var/www/wx/ThinkPHP/Library/Think/Controller.class.php 第 125 行.
+NOTIC: [8] Undefined index: uid /var/www/wx/ThinkPHP/Library/Think/Controller.class.php 第 129 行.
+NOTIC: [8] Undefined index: from /var/www/wx/Application/Home/Controller/UserController.class.php 第 107 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+NOTIC: [8] Undefined index: _addons /var/www/wx/Runtime/Cache/Home/b171d71961885d3bf0f7a9b2e0867b01.php 第 40 行.
+SQL: SHOW COLUMNS FROM `wp_addons` [ RunTime:0.000929s ]
+SQL: SELECT * FROM `wp_addons` WHERE ( `status` = 1 ) AND ( `type` = 1 )  [ RunTime:0.024416s ]
+SQL: SHOW COLUMNS FROM `wp_addons` [ RunTime:0.000951s ]
+SQL: SHOW COLUMNS FROM `wp_member_public` [ RunTime:0.036718s ]
+SQL: SELECT * FROM `wp_member_public` WHERE ( `token` = -1 ) LIMIT 1   [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `wp_member_public_link` [ RunTime:0.014503s ]
+SQL: SELECT `addon_status` FROM `wp_member_public_link` WHERE ( `uid` = null ) AND ( `mp_id` = null ) LIMIT 1   [ RunTime:0.000329s ]
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+NOTIC: [8] Undefined variable: addons /var/www/wx/Application/Common/Common/function.php 第 465 行.
+INFO: [ pageFooter ] --START--
+SQL: SELECT `addon_config` FROM `wp_member_public` WHERE ( `token` = -1 ) LIMIT 1   [ RunTime:0.010540s ]
+SQL: SHOW COLUMNS FROM `wp_addons` [ RunTime:0.000803s ]
+SQL: SELECT `config` FROM `wp_addons` WHERE ( `name` = 'BaiduStatistics' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000250s ]
+INFO: Run BaiduStatistics [ RunTime:0.013108s ]
+INFO: [ pageFooter ] --END-- [ RunTime:0.013177s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.117454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.117514s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000073s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2014-07-25T16:46:15+08:00 ] 180.99.64.192 /index.php?s=/Admin/Public/login.html
+NOTIC: [8] Undefined index: uid /var/www/wx/ThinkPHP/Library/Think/Controller.class.php 第 125 行.
+NOTIC: [8] Undefined index: uid /var/www/wx/ThinkPHP/Library/Think/Controller.class.php 第 129 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
