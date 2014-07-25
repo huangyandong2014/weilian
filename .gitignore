@@ -1,0 +1,10 @@
+Runtime/*
+*.mdb  
+*.ldb  
+*.sln  
+*.config
+
+Application/User/Conf/config.php
+Application/Common/Conf/config.php
+./sftp-config.json
+*.sublime-project
