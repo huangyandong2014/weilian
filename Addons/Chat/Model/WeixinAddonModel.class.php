@@ -9,9 +9,14 @@ class WeixinAddonModel extends WeixinModel {
 	function reply($dataArr, $keywordArr = array()) {
 		$this->config = getAddonConfig ( 'Chat' ); // 获取后台插件的配置参数	
 		//dump($this->config);
-			
-		// 先尝试小九机器人
-		$content = $this->_xiaojo ( $dataArr ['Content'] );
+	
+		// 先尝试图灵
+		$content = $this->_tuling ( $dataArr ['Content'] );
+		// 再尝试小九
+		
+		if (empty ( $content )) {
+			$content = $this->_xiaojo ( $dataArr ['Content'] );
+		}
 		
 		// 再尝试小黄鸡
 		if (empty ( $content )) {
@@ -19,6 +24,7 @@ class WeixinAddonModel extends WeixinModel {
 		}
 		
 		// TODO 此处可继续增加其它API接口
+		
 		
 		// 最后只能随机回复了
 		if (empty ( $content )) {
@@ -48,6 +54,15 @@ class WeixinAddonModel extends WeixinModel {
 		$result = json_decode ( $result, true );
 		
 		return $result ['response'];
+	}
+    // 图灵
+	private function _tuling($keyword) {
+		$api_url = $this->config['tuling_url']."?key=" . $this->config['tuling_key'] . "&lc=ch&ft=0.0&info=" . $keyword;
+		
+		$result = file_get_contents ( $api_url );
+		$result = json_decode ( $result, true );
+
+		return $result ['text'];
 	}
 	
 	// 小九机器人

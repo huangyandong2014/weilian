@@ -12,6 +12,18 @@ return array (
 				'value' => 'http://sandbox.api.simsimi.com/request.p',
 				'tip'=>'格式如：http://sandbox.api.simsimi.com/request.p'
 		) ,
+		'tuling_key' => array ( // 配置在表单中的键名 ,这个会是config[random]
+				'title' => '图灵KEY:', // 表单的文字
+				'type' => 'text', // 表单的类型：text、textarea、checkbox、radio、select等
+				'value' => 'd812d695a5e0df258df952698faca6cc',  // 表单的默认值
+				'tip'=>'格式如：d812d695a5e0df258df952698faca6cc'
+				),
+		'tuling_url' => array (
+				'title' => '图灵地址:',
+				'type' => 'text',
+				'value' => 'http://www.tuling123.com/openapi/api',
+				'tip'=>'格式如：http://www.tuling123.com/openapi/api'
+		) ,
 		'i9_url' => array ( 
 				'title' => '小九机器人地址:', 
 				'type' => 'text', 
