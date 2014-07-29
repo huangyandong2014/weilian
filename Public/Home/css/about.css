@@ -21,8 +21,8 @@ h1{ margin:0;}
 .head .logo{ display:block;width:300px; height:71px; text-indent:-9999px; overflow:hidden; background:url(../images/about/logo.png?20140517) no-repeat}
 .head .nav{ float:right; margin-top:18px;}
 .head .nav a{ color:#666; padding:0 15px; line-height:50px; height:50px; display:block; float:left;border-bottom:3px solid #fff; font-size:16px; font-weight:500}
-.head .nav a:hover{ color:#1dbd03; text-decoration:none}
-.head .nav a.cur{ color:#1dbd03; border-bottom:3px solid #1dbd03}
+.head .nav a:hover{ color:#00a9b6; text-decoration:none}
+.head .nav a.cur{ color:#00a9b6; border-bottom:3px solid #00a9b6}
 .head .nav a.has_icon{ position:relative}
 .head .nav a.has_icon .icon{ position:absolute; top:0; left:45px; line-height:15px;}
 /* banner */

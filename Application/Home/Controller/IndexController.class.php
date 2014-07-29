@@ -16,7 +16,8 @@ class IndexController extends HomeController {
 	
 	// 系统首页
 	public function index() {
-		redirect ( U ( 'home/index/main' ) );
+		$this->display();
+		// redirect ( U ( 'home/index/main' ) );
 	}
 	// 系统介绍
 	public function introduction() {

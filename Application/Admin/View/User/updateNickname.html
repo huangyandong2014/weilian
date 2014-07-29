@@ -2,31 +2,24 @@
 
 <block name="body">
 	<!-- 标题栏 -->
-
 		<div class="tab-wrap">
 		<ul class="tab-nav nav">
-		<li ><a href="{:U('updatenickname')}">修改昵称</a></li>
-		<li class="current"><a href="{:U('updatepassword')}">修改密码</a></li>
+		<li class="current"><a href="{:U('updateNickname')}">修改昵称</a></li>
+		<li ><a href="{:U('updatePassword')}">修改密码</a></li>
 		</ul>
 		<div class="tab-content">
 	<!-- 修改密码表单 -->
-	<form action="{:U('User/submitPassword')}" method="post" class="form-horizontal">
+    <form action="{:U('User/submitNickname')}" method="post" class="form-horizontal" autocomplete="off">
 		<div class="form-item">
-			<label class="item-label">原密码：</label>
+			<label class="item-label">密码：<span class="check-tips">（请输入密码）</span></label>
 			<div class="controls">
-				<input type="password" name="old" class="text input-large" autocomplete="off" />
+				<input type="password" name="password" class="text input-large"  autocomplete="off"/>
 			</div>
 		</div>
 		<div class="form-item">
-			<label class="item-label">新密码：</label>
+			<label class="item-label">昵称：<span class="check-tips">（请输入新昵称）</span></label>
 			<div class="controls">
-				<input type="password" name="password" class="text input-large" autocomplete="off" />
-			</div>
-		</div>
-		<div class="form-item">
-			<label class="item-label">确认密码：</label>
-			<div class="controls">
-				<input type="password" name="repassword" class="text input-large" autocomplete="off" />
+				<input type="text" name="nickname" class="text input-large" autocomplete="off" value="{:get_username()}"/>
 			</div>
 		</div>
 		<div class="form-item">
