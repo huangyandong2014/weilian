@@ -14,13 +14,7 @@
                 <!--<a <if condition="ACTION_NAME eq 'store' and CONTROLLER_NAME eq 'Forum'">class="cur"</if> href="{:U('home/forum/store')}">讨论区</a>-->
                
                 <a <if condition="ACTION_NAME eq 'help'">class="cur"</if> href="{:U('home/index/help')}">帮助中心</a>
-                
-                <if condition="!is_login()">
-                <a <if condition="ACTION_NAME eq 'login' and CONTROLLER_NAME eq 'User'">class="cur"</if> href="{:U('home/user/login')}">登录</a>
-                <a <if condition="ACTION_NAME eq 'register' and CONTROLLER_NAME eq 'User'">class="cur"</if> href="{:U('home/user/register')}">注册</a>
-                <else/>
                 <a href="{:U('home/index/main')}">管理中心</a>
-                </if>
                  <!-- <a <if condition="CONTROLLER_NAME eq 'Developer'">class="cur"</if> href="{:U('home/Developer/myApps')}">开发者中心</a> -->
                 
                 <!-- <a href="{:U('home/index/cloud')}" class="has_icon">专属云主机<em class="icon"><img src="__IMG__/new.gif" alt=""/></em></a> -->

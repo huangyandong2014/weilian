@@ -7,7 +7,7 @@
 *{ padding:0; margin:0;}
 li,ul{ list-style:none}
 img{ border:none}
-body{ font-family: "微软雅黑","Microsoft Yahei",Tahoma, Geneva, sans-serif; font-size:14px; line-height:20px;}
+body{ font-family: "微软雅黑","Microsoft Yahei",Tahoma, Geneva, sans-serif; font-size:14px; /*line-height:20px;*/}
 a{ color:#666; text-decoration:none}
 a:hover{ color:#333; text-decoration:underline;}
 .fl{ float:left}

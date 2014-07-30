@@ -1,31 +1,18 @@
 <extend name="Base/login_base" />
+
 <block name="body">
-<div class="login_top_btn">
-      <a class="btn" href="{:U('User/login')}">登录</a> 
-      <a class="btn" href="{:U('admin/index/index')}" target="_blank">后台管理</a>
-</div>
+<div class="login_body">
+<!-- <section class="side_ad">
+  <img src="./Public/Home/images/about/desc_pic.jpg">
+</section> -->
 <section class="reg_box">
 <!-- 提示 -->
-<div id="top-alert" class="top-alert-tips alert-error" style="display: none;">
-  <a class="close" href="javascript:;"><b class="fa fa-times-circle"></b></a>
-  <div class="alert-content">这是内容</div>
-</div>
+
 	<form class="login-form" action="__SELF__" method="post">
-    	<a href="{:U('Home/Index/index')}">
-       		
-            <php> if(!C('SYSTEM_LOGO')) { </php>
-       		<div class="logo_icon"></div>
-       		<div class="logo_text"><span class="beta"></span></div>
-            
-            <php> } else { </php>
-            <img src="{:C('SYSTEM_LOGO')}" />
-            <php> } </php>
-    	</a>
-    	</a>
-      	<div class="form_title">
-        	简洁强大的微信公众平台开发框架
-      	</div>
-       <div class="form_body">
+    	<div class="form_title">
+        <h3>注册&nbsp;&nbsp;<a class="tips" href="{:U('login')}">已有账号？直接登录</a></h3>
+      </div>
+      <div class="form_body">
           <div class="control-group">
             <label class="control-label" for="username">用户名</label>
             <div class="controls">
@@ -74,7 +61,7 @@
       </div>
     </form>
 </section>
-
+</div>
 </block>
 
 <block name="side"> </block>

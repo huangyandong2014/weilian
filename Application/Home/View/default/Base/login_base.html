@@ -1,9 +1,35 @@
-<!DOCTYPE HTML>
+<!-- <include file="_head"/> -->
+<!doctype html>
 <html>
 <head>
-	<include file="Public/head"/>
+<include file="Public/head" />
+<link type="text/css" rel="stylesheet" href="__CSS__/about.css?v={:SITE_VERSION}" />
 </head>
-<body id="login_body" <php>if(C('LOGIN_BACKGROUP')) {</php> style="background:url('{:C('LOGIN_BACKGROUP')}') no-repeat scroll center center rgba(0, 0, 0, 0)" <php> } </php> >
+<body>
+    <div class="head">
+        <div class="wrap">
+            <h1 class="fl"><a class="logo" href="{:SITE_URL}" title="返回首页">微联世界微信公众号管理平台,多公众号管理,配置简单</a></h1>
+            <div class="nav">
+                <a <if condition="ACTION_NAME eq 'index' and CONTROLLER_NAME eq 'Index'">class="cur"</if> href="{:U('home/index/index')}">首页</a>
+                <a <if condition="ACTION_NAME eq 'about' and CONTROLLER_NAME eq 'Index'">class="cur"</if> href="{:U('home/index/about')}">关于</a>
+                <!--<a <if condition="ACTION_NAME eq 'store' and CONTROLLER_NAME eq 'Forum'">class="cur"</if> href="{:U('home/forum/store')}">讨论区</a>-->
+               
+                <a <if condition="ACTION_NAME eq 'help'">class="cur"</if> href="{:U('home/index/help')}">帮助中心</a>
+
+               
+                <if condition="!is_login()">
+                <a <if condition="ACTION_NAME eq 'login' and CONTROLLER_NAME eq 'User'">class="cur"</if> href="{:U('home/user/login')}">登录</a>
+                <a <if condition="ACTION_NAME eq 'register' and CONTROLLER_NAME eq 'User'">class="cur"</if> href="{:U('home/user/register')}">注册</a>
+                </if>
+            </div>
+        </div>
+    </div>
+<!-- 提示 -->
+<div id="top-alert" class="top-alert-tips alert-error" style="display: none;">
+  <a class="close" href="javascript:;"><b class="fa fa-times-circle"></b></a>
+  <div class="alert-content">这是内容</div>
+</div>    
+
 	<!-- 主体 -->
     <php>
     $m = strtolower(MODULE_NAME);
@@ -15,11 +41,42 @@
     $navClass[$m.'_'.$c.'_'.$a] = 'active';
     $addonList = D ( 'Addons' )->getWeixinList (false, array(), true);
     </php>
+    <block name="side"></block>
 	<block name="body"></block>
 	<!-- /主体 -->
 
 	<!-- 底部 -->
-	<include file="Public/footer"/>
-	<!-- /底部 -->
+    <div class="footer">
+        <div class="wrap foot_wrap">
+            <div class="foot_div">
+                <h6>关于我们</h6>
+                <a href="{:U('index/about')}">关于我们</a><br/>
+                <a href="{:U('index/about')}">联系方式</a><br/>
+                <!--<a href="#">友情链接</a><br/>-->
+                <!-- <a href="{:U('license')}">授权协议</a> -->
+                
+            </div>
+            <div class="foot_div">
+                <h6>帮助</h6>
+                <a href="{:U('help')}">帮助中心</a><br/>
+                <!-- <a href="http://bbs.weiphp.cn" target="_blank">官方论坛</a><br/> -->
+                <!--<a href="javasctipt:;" target="_blank">官方微博</a><br/>-->
+                <a href="javascript:;">官方QQ交流群：239046780</a>
+                
+            </div>
+            <div class="getqrcode">
+                <img src="__IMG__/getqrcode.jpg"/>
+                <p>微信扫码左侧二维码<br/>并加关注微联世界官方微信公众号<br/>体验微联世界的最新功能</p>
+            </div>
+            <div class="foot_logo"></div>
+        </div>
+        <p class="copyright">{:C('COPYRIGHT')} {:C('WEB_SITE_ICP')}</p>
+    </div>
+<script type="text/javascript" src="__STATIC__/bootstrap/js/bootstrap.min.js"></script>
+<!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
+{:hook('pageFooter', 'widget')}    
 </body>
 </html>
+
+	<!-- /底部 -->
+

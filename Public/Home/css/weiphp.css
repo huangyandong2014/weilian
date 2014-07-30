@@ -11,7 +11,7 @@
 .logo_icon{ width:60px; height:60px; margin:0 auto; background:url(../images/logo_80.png) center center no-repeat;}
 .logo_text{ height:60px; margin:20px 0 10px; background:url(../images/logo_text.png) center top no-repeat; position:relative}
 .logo_text .beta{ position:absolute; height:24px; width:76px; right:65px; top:5px; background:url(../images/beta2.0.png) no-repeat}
-.form_title{text-align:center; color:#ccc; font-size:16px; display:none}
+.form_title{text-align:left; color:#333; font-size:16px; margin-left:46px;/*display:none*/}
 .login_box .form_body{ margin-top:30px;}
 .login_box .control-label{ display:none}
 .login_box .controls{ margin:20px auto 0; display:block; width:308px; position:relative}
