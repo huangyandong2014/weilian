@@ -15,7 +15,7 @@ return array (
 		'tuling_key' => array ( // 配置在表单中的键名 ,这个会是config[random]
 				'title' => '图灵KEY:', // 表单的文字
 				'type' => 'text', // 表单的类型：text、textarea、checkbox、radio、select等
-				'value' => 'd812d695a5e0df258df952698faca6cc',  // 表单的默认值
+				'value' => '856e19ca8b5c422c707fe0dda9ee4fc2',  // 表单的默认值
 				'tip'=>'格式如：d812d695a5e0df258df952698faca6cc'
 				),
 		'tuling_url' => array (
