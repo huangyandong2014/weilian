@@ -33,7 +33,7 @@ class WeixinAddonModel extends WeixinModel {
 		
 		// 增加积分,每隔5分钟才加一次，5分钟内只记一次积分
 		add_credit ( 'chat', 300 );
-		
+
 		$res = $this->replyText ( $content );
 		return $res;
 	}

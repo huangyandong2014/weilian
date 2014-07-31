@@ -31,6 +31,11 @@ class WeixinController extends HomeController {
 		// 记录日志
 		addWeixinLog ( $data, $GLOBALS ['HTTP_RAW_POST_DATA'] );
 		
+		//在交互时自动注册粉丝 防止之前关注的粉丝在follow表中没有记录，从而导致get_mid得到的是一个负整数
+		//同时要修改FollowModel.class.php的init_follow方法
+		//by Mekal 2014-7-31
+		$info = D ( 'Common/Follow' )->init_follow ( $data ['FromUserName'] ,false);
+		
 		// 回复数据
 		$this->reply ( $data, $weixin );
 		
