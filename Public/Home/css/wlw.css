@@ -219,7 +219,9 @@
 }
 .btn:hover {text-decoration: none;}
 .banner-index{
-  background:url(../images/banner.jpg) no-repeat;
+  /*background:url(../images/banner.jpg) no-repeat;*/
+  background-color: #00a9b6;
+  background-image: none;
 }
 
 /*登录注册页面样式 by Mekal*/

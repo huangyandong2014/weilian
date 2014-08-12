@@ -203,6 +203,8 @@ class ScratchController extends AddonsController {
 		$data ['cTime'] = time ();
 		$data ['addon'] = 'Scratch';
 		$data ['target_id'] = I ( 'id' );
+
+		$data ['token'] = get_token();
 		
 		$data ['prize_id'] = $map ['id'] = I ( 'prize_id' );
 		

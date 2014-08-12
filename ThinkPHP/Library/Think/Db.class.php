@@ -776,6 +776,7 @@ class Db {
     public function select($options=array()) {
         $this->model  =   $options['model'];
         $sql    = $this->buildSelectSql($options);
+        // echo $sql;
         $cache  =  isset($options['cache'])?$options['cache']:false;
         if($cache) { // 查询缓存检测
             $key    =  is_string($cache['key'])?$cache['key']:md5($sql);

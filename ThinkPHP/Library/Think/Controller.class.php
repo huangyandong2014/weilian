@@ -572,7 +572,7 @@ abstract class Controller {
 		
 		$list_data = $this->_get_model_list ( $model, $page, $order );
 		$this->assign ( $list_data );
-		// dump($list_data);
+		// dump($model);
 		
 		$templateFile || $templateFile = $model ['template_list'] ? $model ['template_list'] : '';
 		$this->display ( $templateFile );
@@ -725,12 +725,12 @@ abstract class Controller {
 	// 获取模型列表数据
 	public function _get_model_list($model = null, $page = 0, $order = 'id desc') {
 		$page || $page = I ( 'p', 1, 'intval' ); // 默认显示第一页数据
-		                                         
+		// dump($model);return;
 		// 解析列表规则
 		$list_data = $this->_list_grid ( $model );
 		$grids = $list_data ['list_grids'];
 		$fields = $list_data ['fields'];
-		
+
 		// 搜索条件
 		$map = $this->_search_map ( $model, $fields );
 		
@@ -758,7 +758,7 @@ abstract class Controller {
 			empty ( $fields ) || in_array ( 'id', $fields ) || array_push ( $fields, 'id' );
 			$name = parse_name ( get_table_name ( $model ['id'] ), true );
 			$data = M ( $name )->field ( empty ( $fields ) ? true : $fields )->where ( $map )->order ( $order )->page ( $page, $row )->select ();
-			
+
 			/* 查询记录总数 */
 			$count = M ( $name )->where ( $map )->count ();
 		}

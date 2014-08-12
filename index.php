@@ -21,7 +21,7 @@ if (! empty ( $_GET ['echostr'] ) && ! empty ( $_GET ["signature"] ) && ! empty 
 	$nonce = $_GET ["nonce"];
 	
 	$tmpArr = array (
-			'weiphp',
+			'wlsj',
 			$timestamp,
 			$nonce 
 	);

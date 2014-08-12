@@ -37,7 +37,7 @@ class SnController extends AddonsController {
 		$map ['token'] = get_token ();
 		$map ['_string'] = 'prize_id>0';
 		session ( 'common_condition', $map );
-		
+
 		parent::lists ( $model );
 	}
 	function del() {
