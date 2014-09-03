@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"/>
+  <title>积分明细</title>
+  <style type="text/css">
+    table{width:100%;}
+    td {padding-right: 10px;border-bottom: 1px solid #ccc;padding-top: 8px;}
+    h3 {font-size: 20px;}
+    h4 {font-size:20px;margin-bottom: 5px;padding-bottom:10px; }
+  </style>
+</head>
+<body>
+<h3>您的积分余额: {$total}</h3>
+<h4>积分明细:</h4>
+  <table cellspacing="0">
+    <thead>
+      <tr>
+        <td>时间</td>
+        <td>操作</td>
+        <td align="right">增减积分</td>
+      </tr>
+    </thead>
+    <tbody>
+      <volist name="list_data" id="data">
+        <tr>
+            <td>{$data.cTime|date="Y.m.d H:i:s",###}</td>
+            <td>{$data.title}</td>
+            <td align="right">{$data.score}</td>
+        </tr>
+      </volist>
+    </tbody>
+  </table>
+</body>
+</html>

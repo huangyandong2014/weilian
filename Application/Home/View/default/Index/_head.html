@@ -14,7 +14,7 @@
                 <!--<a <if condition="ACTION_NAME eq 'store' and CONTROLLER_NAME eq 'Forum'">class="cur"</if> href="{:U('home/forum/store')}">讨论区</a>-->
                
                 <a <if condition="ACTION_NAME eq 'help'">class="cur"</if> href="{:U('home/index/help')}">帮助中心</a>
-                
+                <a href="http://www.whyfan.com">微范资讯</a>
                 <if condition="!is_login()">
                 <a <if condition="ACTION_NAME eq 'login' and CONTROLLER_NAME eq 'User'">class="cur"</if> href="{:U('home/user/login')}">登录</a>
                 <a <if condition="ACTION_NAME eq 'register' and CONTROLLER_NAME eq 'User'">class="cur"</if> href="{:U('home/user/register')}">注册</a>

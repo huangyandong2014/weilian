@@ -1,7 +1,9 @@
 <include file="Public/mobile_head"/>	
-<link href="{:CUSTOM_TEMPLATE_PATH}Index/bigBackgroundV1/main.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
-<body id="weisite" style="background:#eee url({$config.background}) no-repeat; background-size:100% 100%">
+<!-- <link href="{:CUSTOM_TEMPLATE_PATH}Index/BigBackgroundV1/main.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css"> -->
+<link rel="stylesheet" type="text/css" href="{:CUSTOM_TEMPLATE_PATH}Index/BigBackgroundV1/animate.css?v={:SITE_VERSION}">
+<body id="weisite" style="<!-- background:#eee url({$config.background}) no-repeat; background-size:100% 100% -->">
 <div class="container">
+    <img src="{$config.background}" style="width:100%;">
     <!--<if condition="!empty($slideshow)">
     <section class="banner">
     	<ul>
@@ -17,11 +19,11 @@
     </section>
     </if>-->
     <if condition="!empty($category)">
-    <section>
+    <section style="position: absolute;right: 5%;top: 5%;">
     	<ul class="icon_lists">
             <volist name="category" id="vo">
-            <li class="m_15">
-                <a class="item p_10" href="{$vo.url}">
+            <li class="m_15 animated zoomInLeft" style="-webkit-transform: rotate(-12deg);margin: 15px 10px;border: 1px solid #ccc;box-shadow: 0 0 5px #FFF;text-align: center;">
+                <a class="item p_10" href="{$vo.url}" style="color: #666; font-size: 18px;text-shadow: 0 0 2px;">
                     <if condition="!empty($vo[icon])"><span class="icon"><img src="{$vo.icon}"/></span></if>
                     <span class="click_item_txt">{$vo.title}</span>
                 </a>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>云酷科技</title>
+<meta name="description" content="云酷,微信,微信公众平台" />
+<meta name="keywords" content="微信公众平台，一款微信公众平台管理系统" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=480" />
+<link rel="stylesheet" href="/themes/mobile/hx001/style/reset.css" />
+<link rel="stylesheet" href="/themes/mobile/hx001/style/mainCssRed.css" />
+<link href="{:CUSTOM_TEMPLATE_PATH}Index/hunshaV1/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{:CUSTOM_TEMPLATE_PATH}Index/hunshaV1/css/mainCssRed.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="{:CUSTOM_TEMPLATE_PATH}Index/hunshaV1/js/jquery.min.js"></script>
+<script type="text/javascript" src="{:CUSTOM_TEMPLATE_PATH}Index/hunshaV1/js/flexslider.js"></script>
+<script type="text/javascript" src="{:CUSTOM_TEMPLATE_PATH}Index/hunshaV1/js/MainJS.js"></script>
+
+        <!--        Hides URL bar on iPhone-->
+        <script type="application/x-javascript">
+            if (navigator.userAgent.indexOf('iPhone') != -1) {
+            addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+            }, false); 
+            }
+
+            function hideURLbar() {
+            window.scrollTo(0, 1);
+            }
+        </script>
+        
+</head>
+
+<div id="indexWrapper">
+  <div id="IndexBGSlider" class="flexslider-bgslider"> 
+                <ul class="slides">
+        <volist name="slideshow" id="vo">
+        	<li>
+            	<a href="{$vo.url}"><img src="{$vo.img}"/></a>
+            </li>
+         </volist>
+                </ul>
+            </div>
+            
+            <div id="BigHeadline">
+                <h1><img src="{$config.background}"></h1>
+            </div>
+ </div>
+    <if condition="!empty($category)">
+    <section>
+     <div id="MainNavHome">
+      <div class="flexslider-nav"> 
+        <ul class="slides">
+          <li>
+          <volist name="category" id="vo">
+          <a href="{$vo.url}"><p>{$vo.title}</p></a>
+          </volist>
+          </li>
+        </ul>
+       </div>
+     </div>
+    </section>
+    </if>
+    
+<!-- 底部导航 -->
+{$footer_html}
+<!-- 统计代码 -->
+<notempty name="config.code">
+<p class="hide bdtongji">
+{$config.code}
+</p>
+
+</html>
