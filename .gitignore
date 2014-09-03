@@ -1,4 +1,5 @@
 Runtime/*
+Data/*
 *.mdb  
 *.ldb  
 *.sln  

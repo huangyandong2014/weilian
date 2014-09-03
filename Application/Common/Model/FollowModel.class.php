@@ -9,19 +9,15 @@ use User\Api\UserApi;
  * 粉丝操作
  */
 class FollowModel extends Model {
-	//增加$is_subscribe参数，配合WeixinController.class.php中的修改，实现对之前关注过的粉丝新录入follow和ucenter
-	//by Mekal 2014-7-31
-	function init_follow($openid,$is_subscribe = true) {
+	function init_follow($openid) {
 		$data ['token'] = get_token ();
 		$data ['openid'] = $openid;
 		
 		$info = $this->where ( $data )->find ();
 
 		if ($info) {
-			if ($is_subscribe) {
-				$save ['subscribe_time'] = $info ['subscribe_time'] = time ();
-				$res = $this->where ( $data )->save ( $save );
-			}
+			$save ['subscribe_time'] = $info ['subscribe_time'] = time ();
+			$res = $this->where ( $data )->save ( $save );
 		} else {
 			$data ['subscribe_time'] = time ();
 			$uid = $this->get_uid_by_ucenter ( $data ['openid'], $data ['token'] );
@@ -43,7 +39,7 @@ class FollowModel extends Model {
 		if ($res)
 			return $res ['id'];
 		
-		$email = time () . '@weiphp.cn';
+		$email = time ().rand(01,99) . '@weiphp.cn';
 		$nickname = uniqid().rand(01,99);
 		
 		/* 调用注册接口注册用户 */
