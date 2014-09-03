@@ -27,6 +27,11 @@ class ScratchController extends AddonsController {
 			$data = M ( get_table_name ( $model ['id'] ) )->find ( $id );
 			$data || $this->error ( '数据不存在！' );
 			
+		$token = get_token ();
+		if (isset ( $data ['token'] ) && $token != $data ['token'] && defined ( 'ADDON_PUBLIC_PATH' )) {
+			$this->error ( '非法访问！' );
+		}			
+			
 			$this->assign ( 'fields', $fields );
 			$this->assign ( 'data', $data );
 			$this->meta_title = '编辑' . $model ['title'];
@@ -203,8 +208,6 @@ class ScratchController extends AddonsController {
 		$data ['cTime'] = time ();
 		$data ['addon'] = 'Scratch';
 		$data ['target_id'] = I ( 'id' );
-
-		$data ['token'] = get_token();
 		
 		$data ['prize_id'] = $map ['id'] = I ( 'prize_id' );
 		

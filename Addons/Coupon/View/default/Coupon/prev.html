@@ -5,17 +5,23 @@
     	<div class="prev_get">
         	<div class="top"></div>
             <div class="mid">
-            	<div class="get_text">
-                	<h6>已获得的优惠券</h6>
-                    <p class="list">
-                        <volist name="my_sn_list" id="sn">
-                SN码&nbsp;&nbsp;：{$sn.sn}<br/>
-                状 态&nbsp;&nbsp;：<eq name="sn.is_use" value="1">已使用<else />未使用</eq><br/>
-                有效期：{$data.start_time|time_format} 至 {$data.end_time|time_format}<br/>
-                        </volist>    
-                          	
-                    </p>
-                </div>
+            	
+                    <empty name="my_sn_list">
+            
+                     	
+            		 <else />  
+                        <div class="get_text">
+                        <h6>已获得的优惠券</h6>
+                        <p class="list">
+                            <volist name="my_sn_list" id="sn">
+                    SN码&nbsp;&nbsp;：{$sn.sn}<br/>
+                    状 态&nbsp;&nbsp;：<eq name="sn.is_use" value="1">已使用<else />未使用</eq><br/>
+                    有效期：{$data.start_time|time_format} 至 {$data.end_time|time_format}<br/>
+                            </volist>    
+                        </p>
+                        </div>
+                      </empty>  
+                
                 <div class="get_text">
                 	<h6>领取条件</h6>
                     <p class="list">
